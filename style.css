@@ -424,7 +424,7 @@ main {
 
 @media (min-width: 1280px) {
   .phone-container {
-    margin-top: -20%;
+    margin-top: 20%;
   } 
   .phone {
     transform: scale(1) translateY(0);
