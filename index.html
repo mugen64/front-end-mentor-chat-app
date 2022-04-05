@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Chat app CSS illustration</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,500;0,700;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="gradient-bg"></div>
+    <main>
+      <div class="phone-container">
+        <div class="phone padding-1 rounded-1">
+          <div class="phone__toolbar rounded">
+            <div class="phone__notch"></div>
+            <div class="me padding-1">
+              <div class="avatar">
+                <span>&#x2770;</span>
+                <img src="/images/avatar.jpg" alt="me" />
+              </div>
+              <div class="status">
+                <h2>Samuel Green</h2>
+                <span>Available to Walk</span>
+              </div>
+              <div class="overflow"></div>
+            </div>
+          </div>
+          <ul class="phone__screen column-flow padding-1 rounded-1">
+            <li class="chat__message" data-sender="them">
+              That sounds great. I’d be happy with that.
+            </li>
+            <li class="chat__message" data-sender="them">
+              Could you send over some pictures of your dog, please?
+            </li>
+
+            <li class="chat__gallery" data-sender="me">
+              <div class="row-flow">
+                <img
+                  class="rounded-1 w-full"
+                  src="/images/dog-image-1.jpg"
+                  alt="dog"
+                />
+                <img
+                  class="rounded-1 w-full"
+                  src="/images/dog-image-2.jpg"
+                  alt="dog"
+                />
+                <img
+                  class="rounded-1 w-full"
+                  src="/images/dog-image-3.jpg"
+                  alt="dog"
+                />
+              </div>
+            </li>
+            <li class="chat__message" data-sender="me">
+              Here are a few pictures. She’s a happy girl!
+            </li>
+            <li class="chat__message" data-sender="me">Can you make it?</li>
+
+            <li class="chat__message" data-sender="them">
+              She looks so happy! The time we discussed works. How long shall I
+              take her out for?
+            </li>
+
+            <li class="chat__message" data-sender="system">
+              <span class="radio"></span><span>30 minute walk</span>
+              <span class="price">$29</span>
+            </li>
+            <li class="chat__message" data-sender="system">
+              <span class="radio"></span
+              ><span class="flex-grow my-auto">1 hour walk</span> <span class="price">$49</span>
+            </li>
+            <div class="message-input flex-flow">
+              <input
+                type="text"
+                name="message"
+                id="message"
+                placeholder="Type a message…"
+              />
+              <button aria-label="submit">&#x276F;</button>
+            </div>
+          </ul>
+        </div>
+      </div>
+
+      <section class="column-flow copy">
+        <h1>Simple booking</h1>
+        <p>
+          Stay in touch with our dog walkers through the chat interface. This
+          makes it easy to discuss arrangements and make bookings. Once the walk
+          has been completed you can rate your walker and book again all through
+          the chat.
+        </p>
+      </section>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a
+        href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Faridah Namutebi</a>.
+    </footer>
+  </body>
+</html>

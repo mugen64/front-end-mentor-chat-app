@@ -1,0 +1,471 @@
+:root {
+  /* placeholder text */
+  --clr-neutral-100: hsl(206, 6%, 79%);
+  /* paragraph */
+  --clr-neutral-400: hsl(270, 7%, 64%);
+  /* main heading */
+  --clr-neutral-500: hsl(271, 36%, 24%);
+
+  /* sub-heading at the top of the app UI */
+  --clr-primary-300: hsl(276, 100%, 81%);
+  /* chat on the left */
+  --clr-primary-400: hsl(276, 55%, 52%);
+  /* chat on the right */
+  --clr-primary-500: hsl(271, 15%, 43%);
+
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-app-bg: hsl(270, 20%, 96%);
+  --clr-app-bg-2: hsla(270, 20%, 96%, 0.5);
+  --clr-submit-btn: hsl(271, 36%, 24%);
+  --clr-radio-btn-bdr: hsl(289, 100%, 72%);
+
+  --clr-magenta: hsl(293, 100%, 63%);
+  --clr-violet: hsl(264, 100%, 61%);
+
+  --clr-gradient-1: linear-gradient(
+    to var(--gradient-direction, bottom),
+    var(--clr-magenta),
+    var(--clr-violet)
+  );
+
+  --font-w-400: 400;
+  --font-w-700: 700;
+  --font-w-500: 500;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body,
+html {
+  font-size: 16px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  color: var(--clr-neutral-400);
+  letter-spacing: 0.5px;
+  background: var(--clr-secondary-100);
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+ul li {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: -0.4px;
+}
+h1 {
+  color: var(--clr-primary-500);
+  font-size: 1.5rem;
+  font-weight: var(--font-w-500);
+}
+p {
+  font-size: 12px;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+::placeholder {
+  color: var(--clr-neutral-100);
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: var(--clr-neutral-100);
+}
+
+::-ms-input-placeholder {
+  color: var(--clr-neutral-100);
+}
+
+.rounded {
+  overflow: hidden;
+  border-radius: 1rem;
+}
+.rounded-1 {
+  overflow: hidden;
+  border-radius: 1.5rem;
+}
+.rounded-2 {
+  overflow: hidden;
+  border-radius: 2rem;
+}
+.w-full {
+  width: 100%;
+}
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.ml-auto {
+  margin-left: auto;
+}
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+.flex-grow {
+  flex-grow: 1;
+}
+.padding-1 {
+  padding: 1rem;
+}
+.bg-none {
+  background: transparent;
+}
+
+.column-flow {
+  display: flex;
+  flex-direction: column;
+  gap: var(--column-gap, 0.95rem);
+}
+.row-flow {
+  display: flex;
+  flex-direction: row;
+  gap: var(--row-gap, 0.95rem);
+}
+
+.phone-container {
+  overflow-y: hidden;
+  overflow-x: hidden;
+  height: 90vh;
+  position: relative;
+  z-index: 10;
+}
+.phone {
+  --column-gap: 0.5rem;
+  max-width: 375px;
+  min-width: 375px;
+  background-color: var(--clr-white);
+  transform: scale(0.5) translateY(-45%);
+}
+.phone__toolbar {
+  --gradient-direction: top;
+  background-image: var(--clr-gradient-1);
+  color: var(--clr-white);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  padding-top: 20px;
+}
+h2 {
+  font-size: 1rem;
+}
+.phone__screen {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  background-color: hsla(206, 6%, 79%, 0.1);
+  position: relative;
+}
+.phone__notch {
+  background-color: var(--clr-white);
+  border-radius: 1rem;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  top: 10px;
+  height: 30px;
+  inset: 0;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  position: relative;
+  z-index: 10;
+  /* justify-content: center; */
+}
+.copy {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  padding: 10%;
+}
+
+.attribution {
+  font-size: 0.625rem;
+  padding-left: 4rem;
+  padding-top: 16px;
+}
+
+.chat__gallery,
+.chat__message {
+  border-radius: 16px;
+  letter-spacing: 1.5px;
+  padding: 8px;
+  width: max-content;
+  max-width: 60%;
+}
+
+.chat__message[data-sender="me"] {
+  color: var(--clr-primary-500);
+  background-color: var(--clr-white);
+  border-bottom-right-radius: 0;
+  text-align: right;
+  margin-left: auto;
+}
+
+.chat__message[data-sender="system"],
+.chat__message[data-sender="them"] {
+  color: var(--clr-primary-400);
+  background-color: var(--clr-app-bg);
+  border-bottom-left-radius: 0;
+  margin-right: auto;
+}
+
+.chat__message[data-sender="system"] {
+  --gradient-direction: right;
+  background-image: var(--clr-gradient-1);
+  color: var(--clr-white);
+  display: flex;
+  /* flex-direction: column; */
+  gap: 4px;
+  width: 100%;
+  align-items: center;
+  font-weight: 300;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.chat__gallery {
+  max-width: 80%;
+}
+.chat__gallery img {
+  border-radius: 25%;
+}
+
+.chat__gallery[data-sender="me"] {
+  text-align: right;
+  margin-left: auto;
+}
+
+.chat__gallery[data-sender="them"] {
+  margin-right: auto;
+}
+
+.me {
+  display: flex;
+  gap: 8px;
+}
+.me span {
+  font-size: 10px;
+  font-weight: 300;
+}
+.me h2 {
+  margin: 0;
+  padding: 0;
+}
+.overflow:after {
+  content: "\2807";
+  font-size: 1.5rem;
+}
+.me .status {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.me .avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+.me .avatar img {
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--clr-white);
+  border-radius: 50%;
+}
+.message-input {
+  border-radius: 2.5rem;
+  padding-right: 4px;
+  padding-left: 2px;
+  margin-top: 8px;
+  overflow-y: hidden;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  transition: all 100ms;
+  background-color: white;
+}
+.message-input:focus-within {
+  border: 2px solid var(--clr-primary-300);
+}
+.message-input input {
+  padding: 8px;
+  border: none;
+  background-color: white;
+  flex-grow: 1;
+  outline: none;
+  height: 48px;
+  transition: all 100ms;
+}
+.message-input button {
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  background-color: var(--clr-submit-btn);
+  color: var(--clr-white);
+  border: none;
+  cursor: pointer;
+  transition: all 100ms;
+}
+
+.message-input button:focus,
+.message-input button:hover {
+  font-size: 1.5rem;
+  border: 2px solid var(--clr-primary-300);
+}
+
+.price {
+  margin-left: auto;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.radio {
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--clr-radio-btn-bdr);
+  border-radius: 50%;
+}
+
+.gradient-bg {
+  position: fixed;
+  top: 0;
+  height: 45vh;
+  width: 50vh;
+  background: var(--clr-gradient-1);
+  border-bottom-left-radius: 50rem;
+  border-bottom-right-radius: 50rem;
+}
+
+@media (min-width: 1280px) {
+  .phone-container {
+    margin-top: -20%;
+  } 
+  .phone {
+    transform: scale(1) translateY(0);
+  }
+
+}
+
+@media (min-width: 1024px) {
+  .phone-container {
+    margin-top: -2%;
+    margin-left: 10%;
+  }
+  main {
+    flex-direction: row;
+  }
+  .phone {
+    box-shadow: 1.5rem 1rem 1rem 0px var(--clr-app-bg-2);
+    transform: scale(0.6) translateY(-20%);
+  }
+  .gradient-bg {
+    height: 100vh;
+    width: 50vh;
+    background: var(--clr-gradient-1);
+    transform: translateX(-10%) translateY(-15%);
+  }
+  .copy {
+    width: 100%;
+    position: relative;
+    top: auto;
+    text-align: left;
+    padding: 0;
+    max-width: 45ch;
+    margin-top: auto;
+    margin-bottom: auto;
+    bottom: auto;
+  }
+  
+  .h1 {
+    font-size: 2.1875rem;
+  }
+  p{
+    font-size: 1rem;
+  }
+}
